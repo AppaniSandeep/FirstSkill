@@ -1,36 +1,109 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Movie App – Next.js + TMDB API
 
-## Getting Started
+A modern movie browsing application built using Next.js (App Router), Server Components, TMDB API, and Tailwind CSS.  
+This app demonstrates server-side rendering, dynamic routing, optimized images, and API integration.
 
-First, run the development server:
+--------------------------------------------------
+## Features
 
-```bash
+1. Server-side data fetching on the homepage using the native fetch API.
+2. Dynamic route for movie details: /movie/[id].
+3. Hero Banner that highlights the first movie result.
+4. Reusable MovieRow component rendered as a Client Component.
+5. Optimized images using the Next.js <Image/> component.
+6. Environment variable security for API keys.
+7. Fixed header with navigation links.
+8. Fully deployed on Vercel.
+
+--------------------------------------------------
+## Project Structure
+
+src/
+ ├── app/
+ │    ├── layout.tsx
+ │    ├── page.tsx
+ │    ├── globals.css
+ │    ├── movie/
+ │    │     └── [id]/
+ │    │           └── page.tsx
+ │    └── components/
+ │          ├── Header.tsx
+ │          ├── HeroBanner.tsx
+ │          └── MovieRow.tsx
+ └── lib/
+      └── tmdb.ts
+
+--------------------------------------------------
+## Technologies Used
+
+- Next.js 14 (App Router)
+- React 18
+- Tailwind CSS
+- TMDB API
+- TypeScript
+- Vercel
+
+--------------------------------------------------
+## Environment Variables
+
+Create a `.env.local` file in the root:
+
+TMDB_API_KEY=your_tmdb_api_key_here
+NEXT_PUBLIC_BASE_URL=http://localhost:3000
+
+After creating this file, restart the dev server:
+
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+--------------------------------------------------
+## Installation and Setup
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+1. Clone the repository:
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+   git clone <your-repo-url>
+   cd movie-app
 
-## Learn More
+2. Install dependencies:
 
-To learn more about Next.js, take a look at the following resources:
+   npm install
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+3. Run the development server:
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+   npm run dev
 
-## Deploy on Vercel
+--------------------------------------------------
+## Deployment (Vercel)
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+1. Push the project to GitHub.
+2. Open Vercel → New Project → Import GitHub Repository.
+3. Add the environment variables:
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+   TMDB_API_KEY=your_tmdb_api_key
+   NEXT_PUBLIC_BASE_URL=https://your-vercel-project.vercel.app
+
+4. Click Deploy.
+
+--------------------------------------------------
+## Routes Overview
+
+### Homepage (/)
+- Fetches popular movies from TMDB.
+- Renders:
+  - Hero Banner
+  - Multiple MovieRow sections
+
+### Movie Detail Page (/movie/[id])
+- Fetches detailed movie data using the movie ID.
+- Renders:
+  - Poster
+  - Title and overview
+  - Release date and rating
+  - Genres
+
+--------------------------------------------------
+## Additional Notes
+
+A separate file named `AI_Report.md` is included which explains:
+- AI tools used
+- Which parts of the code were AI-assisted
+- GitHub and Vercel deployment links
