@@ -101,9 +101,5 @@ npm run dev
   - Genres
 
 --------------------------------------------------
-## Additional Notes
-
-A separate file named `AI_Report.md` is included which explains:
-- AI tools used
-- Which parts of the code were AI-assisted
-- GitHub and Vercel deployment links
+## Deployment URLs
+- **Vercel URL:** https://blockly-6unw.vercel.app/
