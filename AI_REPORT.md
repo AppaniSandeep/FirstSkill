@@ -12,4 +12,4 @@
 
 ## 3. Deployment URLs
 - **Vercel URL:** https://blockly-6unw.vercel.app/
-- **GitHub Repository:** 
+- **GitHub Repository:** https://github.com/AppaniSandeep/FirstSkill.git
