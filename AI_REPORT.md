@@ -11,5 +11,5 @@
 - Deployment optimization steps
 
 ## 3. Deployment URLs
-- **Vercel URL:** 
+- **Vercel URL:** https://blockly-6unw.vercel.app/
 - **GitHub Repository:** 
